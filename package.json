@@ -1,6 +1,6 @@
 {
   "name": "rte-node",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "NodeJS Applcation wrapper for the Riby Transaction Engine",
   "main": "index.js",
   "scripts": {
