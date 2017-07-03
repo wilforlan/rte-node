@@ -45,8 +45,8 @@ var rte = new RTE('T541','df06f76cc0ee9212dfe9a6ef84a5ed04','$2a$10$31zmBTMWR92i
 // var options = {
 //	"user_id": "8383748",
 //    "card_type": "mastercard",
-//    "number": "111122233334444",
-//    "issuer": "STANBIC",
+//    "number": "1111666677778888",
+//    "issuer": "ZENITH",
 //    "cvv2": "123",
 //    "expiry_month": "07",
 //    "expiry_year": "17"
@@ -59,12 +59,30 @@ var rte = new RTE('T541','df06f76cc0ee9212dfe9a6ef84a5ed04','$2a$10$31zmBTMWR92i
 // var options = {
 //	"user_id" : "8383748",
 //	"name": "James Nikon",
-//    "number": "2067469868",
-//    "bank_name": "GTB",
+//    "number": "0123456789",
+//    "bank_name": "UNION",
 //    "bank_code": "014"
 // };
 //
 // rte.User.addUserBankAccount(options, function(error, body){
+// 	console.log(body);
+// });
+
+// var options = {
+//	"user_id" : "8383748",
+//	"card_number": "1111666677778888",
+// };
+//
+// rte.User.deleteUserCard(options, function(error, body){
+// 	console.log(body);
+// });
+
+// var options = {
+//	"user_id" : "8383748",
+//	"account_number": "0123456789",
+// };
+//
+// rte.User.deleteUserBankAccount(options, function(error, body){
 // 	console.log(body);
 // });
 
