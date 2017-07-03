@@ -11,6 +11,10 @@
  * Get Transactions
  * Get Transaction by User
  * Get All User on RTE
+ * Add User Cards
+ * Delete User Cards
+ * Add User Bank Accounts
+ * Delete User Bank Accounts
 
 
 ### Pending Features
@@ -134,9 +138,17 @@ Sample Reponse:
       console.log(body);
     });
 
+Sample Reponse: 
+    ```{ 
+        responseCode: 1,
+          responseText: 'New card added for user',
+          payload: {},
+          RTERequestSuccessful: true }```
+
+
 Sample Response:
     
-        { responseCode: 1,
+    ```{ responseCode: 1,
       responseText: 'User Added Successfully',
       payload:
        { user:
@@ -150,7 +162,83 @@ Sample Response:
             money_locked: [],
             wallet: [Object],
             user: [Object] } },
-      RTERequestSuccessful: true }
+      RTERequestSuccessful: true }```
+
+### Add New User Card
+    var options = {
+        "user_id": "8383748",
+        "card_type": "mastercard",
+        "number": "1111666677778888",
+        "issuer": "ZENITH",
+        "cvv2": "123",
+        "expiry_month": "07",
+        "expiry_year": "17"
+    };
+
+    rte.User.updateUserCard(options, function(error, body){
+        console.log(body);
+    });
+
+Sample Reponse: 
+    ```{ 
+        responseCode: 1,
+          responseText: 'New card added for user',
+          payload: {},
+          RTERequestSuccessful: true }```
+
+### Add User Bank Account
+    var options = {
+        "user_id" : "8383748",
+        "name": "James Nikon",
+        "number": "0123456789",
+        "bank_name": "GTB",
+        "bank_code": "013"
+    };
+    
+    rte.User.addUserBankAccount(options, function(error, body){
+        console.log(body);
+    });
+
+Sample Reponse: 
+    ```{ 
+        responseCode: 1,
+          responseText: 'Added bank account',
+          payload: {},
+          RTERequestSuccessful: true }```
+
+### Delete User Card
+    var options = {
+        "user_id" : "8383748",
+        "card_number": "1111222233334444",
+    };
+    
+    rte.User.deleteUserCard(options, function(error, body){
+        console.log(body);
+    });
+
+Sample Reponse: 
+    ```{ 
+        responseCode: 1,
+          responseText: 'User card deleted',
+          payload: {},
+          RTERequestSuccessful: true }```
+
+### Delete User bank Account
+    var options = {
+        "user_id" : "8383748",
+        "account_number": "0123456789",
+    };
+    
+    rte.User.deleteUserBankAccount(options, function(error, body){
+        console.log(body);
+    });
+
+Sample Reponse: 
+    ```{ 
+        responseCode: 1,
+          responseText: 'Bank Account deleted',
+          payload: {},
+          RTERequestSuccessful: true }```
 
 # Transactions
     
